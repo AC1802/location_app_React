@@ -7,11 +7,13 @@ import '../../styles/styles.css';
 
 export default function Home() {
     return (
-        <div>
-            <Header />
-            <h1>Homepage</h1>
-            <Card />
+        <>
+            <div className="main_container">
+                <Header />
+                <h1>Homepage</h1>
+                <Card />
+            </div>
             <Footer />
-        </div>
+        </>
     )
 }
