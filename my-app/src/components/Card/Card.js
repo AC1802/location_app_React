@@ -1,12 +1,11 @@
 import React from "react";
+import CardCSS from "../../styles/Card.module.css";
 
 export default function Card() {
     return (
-        <div className="article_container">
-            <article>
-                <img src="" alt="image du logement" />
-                <p>Titre de location</p>
-            </article>
-        </div>
+        <article className={CardCSS.article}>
+            <img src="" alt="logement" className={CardCSS.img}/>
+            <p className={CardCSS.p}>Titre de la location</p>
+        </article>
     )
 }
