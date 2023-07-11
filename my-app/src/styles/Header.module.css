@@ -1,11 +1,12 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@500&display=swap');
 
 .navbar {
-    margin-top: 40px;
     display: flex;
     align-items: center;
     justify-content: space-between;
     height: 68px;
+    max-width: 1240px;
+    margin: 40px auto 0;
 }
 
 .logo {
@@ -18,5 +19,5 @@
     font-size: 24px;
     color: #FF6060;
     text-decoration: none;
-    margin-left: 30px;
+    margin-left: 57px;
 }

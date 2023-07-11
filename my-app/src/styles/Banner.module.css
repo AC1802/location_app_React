@@ -1,6 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@500&display=swap');
 
 .img_container {
+    position: relative;
     width: 100%;
     height: 223px;
     border-radius: 25px;
@@ -11,11 +12,28 @@
     display: flex;
     align-items: center;
     justify-content: center;
-}
+    margin-top: 64px;
+  }
+  
+
+.img_container::after {
+    position: absolute;
+    content: "";
+    z-index: 50;
+    background-color: black;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 0.3;
+    border-radius: 25px;
+  }
 
 .p {
+    position: relative;
+    z-index: 51;
     width: 705px;
-    font-family: 'Montserrat', sans-serif;
+    font-family: "Montserrat", sans-serif;
     font-size: 48px;
     color: white;
-}
+  }
