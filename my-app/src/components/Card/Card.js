@@ -1,11 +1,11 @@
 import React from "react";
-import styles from "../../styles/Card.module.css";
+import styles from '../../styles/Card.module.css';
 
-export default function Card() {
+export default function Card(props) {
     return (
-        <article className={styles.article}>
-            <img src="" alt="logement" className={styles.img}/>
-            <p className={styles.p}>Titre de la location</p>
+        <article key={props.id} className={styles.article}>
+            <img src={props.cover} alt="logement" className={styles.img}/>
+            <p className={styles.p}>{props.title}</p>
         </article>
     )
 }
