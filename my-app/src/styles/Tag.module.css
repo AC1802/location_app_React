@@ -1,0 +1,17 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@500&display=swap");
+
+.pContainer {
+  width: 115px;
+  height: 25px;
+  border-radius: 10px;
+  background-color: #ff6060;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.p {
+  font-family: "Montserrat", sans-serif;
+  font-size: 14px;
+  color: white;
+}
