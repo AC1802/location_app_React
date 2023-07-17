@@ -4,7 +4,7 @@
   padding: 0 20px;
 }
 
-.cardContainer {
+.cardContainer_ul {
   display: flex;
   flex-wrap: wrap;
   align-items: center;
@@ -13,9 +13,25 @@
   width: 100%;
   background-color: #f6f6f6;
   border-radius: 25px;
-  padding-top: 50px;
-  padding-bottom: 50px;
+  padding: 50px 0;
   row-gap: 50px;
   margin-top: 40px;
   margin-bottom: 40px;
+}
+
+li {
+  list-style: none;
+}
+
+@media all and (max-width: 535px) {
+  .homeBanner {
+    height: 111px;
+  }
+
+  .cardContainer_ul {
+    background-color: white;
+    margin: 0;
+    padding: 25px 0;
+    row-gap: 25px;
+  }
 }

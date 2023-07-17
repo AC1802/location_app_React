@@ -6,7 +6,9 @@
   justify-content: space-between;
   height: 68px;
   max-width: 1240px;
-  margin: 40px auto 0;
+  width: 100%;
+  margin: 40px auto;
+  padding: 0 10px;
 }
 
 .logo {
@@ -14,10 +16,40 @@
   height: 68px;
 }
 
+.list {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  gap: 57px;
+}
+
 .list_items {
   font-family: "Montserrat", sans-serif;
   font-size: 24px;
   color: #ff6060;
   text-decoration: none;
-  margin-left: 57px;
+}
+
+.list_items:active {
+  text-decoration: underline;
+}
+
+@media all and (max-width: 535px) {
+  .navbar {
+    max-width: 335px;
+    margin: 20px auto 0;
+  }
+
+  .logo {
+    width: 145px;
+    height: 47px;
+  }
+
+  .list {
+    gap: 20px;
+  }
+
+  .list_items {
+    font-size: 12px;
+  }
 }

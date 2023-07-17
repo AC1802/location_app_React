@@ -18,3 +18,11 @@
   font-family: "Montserrat", sans-serif;
   font-size: 18px;
 }
+
+
+@media all and (max-width: 375px) {
+  .article {
+    width: 335px;
+    height: 255px;
+  }
+}
