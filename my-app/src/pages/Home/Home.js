@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import { Link, useLocation } from "react-router-dom";
+import { Link } from "react-router-dom";
 import Banner from "../../components/Banner/Banner";
 import Card from "../../components/Card/Card";
 import "../../styles/styles.css";
@@ -18,13 +18,13 @@ export default function Home() {
 
   return (
     <div className="mainContainer">
-      <Banner title={bannerTitle} backgroundImage={BackgroundImage} />
+      <Banner className="homeBanner" title={bannerTitle} backgroundImage={BackgroundImage} />
       <div className="cardContainer">
         <ul className="cardContainer_ul">
           {locationData.map((location) => {
             return (
               <li key={location.id}>
-                <Link to="/housing/${location.id}">
+                <Link to={{pathname: "/housing/" + location.id}}>
                   <Card
                     cover={location.cover}
                     title={location.title}
