@@ -1,78 +1,133 @@
 @import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@500&display=swap");
 
 .mainContainerInner {
-    display: flex;
-    justify-content: space-between;
+  display: flex;
+  justify-content: space-between;
+}
+
+.carrouselContainer {
+    max-width: 1240px;
+    width: 100%;
+    max-height: 415px;
+    height: 100%;
 }
 
 .h1 {
-    width: 100%;
-    height: 51px;
-    font-size: 36px;
-    font-family: "Montserrat", sans-serif;
-    line-height: 51.34px;
-    color: #FF6060;
-    font-weight: 500;
-    margin: 0;
+  width: 100%;
+  height: 51px;
+  font-size: 36px;
+  font-family: "Montserrat", sans-serif;
+  line-height: 51.34px;
+  color: #ff6060;
+  font-weight: 500;
+  margin: 0;
 }
 
 .h2 {
-    width: 100%;
-    height: 26px;
-    font-size: 18px;
-    font-family: "Montserrat", sans-serif;
-    line-height: 25.67px;
-    color: #FF6060;
-    font-weight: 500;
-    margin: 0;
+  width: 100%;
+  height: 26px;
+  font-size: 18px;
+  font-family: "Montserrat", sans-serif;
+  line-height: 25.67px;
+  color: #ff6060;
+  font-weight: 500;
+  margin: 0;
 }
 
 .tagContainer {
-    display: flex;
-    gap: 5px;
-    margin: 20px 0;
+  display: flex;
+  gap: 5px;
+  margin: 20px 0;
 }
 
 .hostRatingContainer {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: space-between;
-    height: 100%;
-    row-gap: 30px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  height: 100%;
+  row-gap: 30px;
 }
 
 .hostContainer {
-    display: flex;
-    align-items: center;
+  display: flex;
+  align-items: center;
 }
 
 .hostName {
-    font-family: "Montserrat", sans-serif;
-    font-weight: 500;
-    font-size: 18px;
-    line-height: 25.67px;
-    color: #FF6060;
-    max-width: 93px;
-    width: 100%;
-    margin: 0;
+  font-family: "Montserrat", sans-serif;
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 25.67px;
+  color: #ff6060;
+  max-width: 93px;
+  width: 100%;
+  margin: 0;
 }
 
 .hostPictureContainer {
-    width: 64px;
-    height: 64px;
-    border-radius: 50%;
+  width: 64px;
+  height: 64px;
+  border-radius: 50%;
 }
 
 .hostPicture {
-    width: 100%;
-    height: 100%;
-    border-radius: 50%;
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
 }
 
 .dropdownContainer {
-    display: flex;
-    justify-content: space-between;
-
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  margin-bottom: 400px;
 }
 
+@media all and (max-width: 535px) {
+  .mainContainerInner {
+    flex-direction: column;
+  }
+
+  .carrouselContainer {
+    max-width: 335px;
+    width: 100%;
+    max-height: 255px;
+    height: 100%;
+  }
+
+  .h1 {
+    max-width: 335px;
+    font-size: 18px;
+  }
+
+  .h2 {
+    max-width: 335px;
+    font-size: 14px;
+  }
+
+  .hostRatingContainer {
+    flex-direction: row-reverse;
+  }
+
+  .hostContainer {
+    gap: 5px;
+  }
+
+  .hostName {
+    font-size: 12px;
+  }
+
+  .hostPictureContainer {
+    width: 32px;
+    height: 32px;
+  }
+
+  .hostPicture {
+    width: 32px;
+  }
+
+  .dropdownContainer {
+    flex-direction: column;
+  }
+}
