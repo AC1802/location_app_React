@@ -17,7 +17,7 @@
   position: absolute;
   top: 50%;
   transform: translate(0, -50%);
-  right: 23px;
+  right: 13px;
   width: 46px;
   height: 79px;
   z-index: 1;
@@ -28,7 +28,7 @@
   position: absolute;
   top: 50%;
   transform: translate(0, -50%);
-  left: 23px;
+  left: 13px;
   width: 46px;
   height: 79px;
   z-index: 1;
@@ -45,4 +45,24 @@
   left: 50%;
   transform: translate(-50%, 0);
   color: white;
+}
+
+@media all and (max-width: 376px) {
+    .carrouselStyle {
+        height: 255px;
+    }
+
+    .leftArrowStyles {
+        width: 24px;
+        height: 24px;
+    }
+
+    .rightArrowStyles {
+        width: 24px;
+        height: 24px;
+    }
+
+    .p {
+        display: none;
+    }
 }

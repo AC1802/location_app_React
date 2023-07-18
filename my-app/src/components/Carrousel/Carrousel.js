@@ -46,7 +46,7 @@ export default function Carrousel(props) {
           </svg>
         </div>
         <div>
-          <p className={styles.p}>{currentIndex}/4</p>
+          <p className={styles.p}>{currentIndex + 1}/{props.length - 1}</p>
         </div>
       </div>
       <div
