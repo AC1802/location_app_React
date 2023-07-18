@@ -5,11 +5,11 @@ export default function Carrousel(props) {
   const [currentIndex, setCurrentIndex] = useState(0);
   console.log(currentIndex);
   const toPrevious = () => {
-    const newIndex = currentIndex === 0 ? props.length - 1 : currentIndex - 1;
+    const newIndex = currentIndex === 0 ? props.images.length - 1 : currentIndex - 1;
     setCurrentIndex(newIndex);
   };
   const toNext = () => {
-    const newIndex = currentIndex === props.length - 1 ? 0 : currentIndex + 1;
+    const newIndex = currentIndex === props.images.length - 1 ? 0 : currentIndex + 1;
     setCurrentIndex(newIndex);
   };
   return (
@@ -46,11 +46,11 @@ export default function Carrousel(props) {
           </svg>
         </div>
         <div>
-          <p className={styles.p}>{currentIndex + 1}/{props.length - 1}</p>
+          <p className={styles.p}>{currentIndex + 1}/{props.images.length}</p>
         </div>
       </div>
       <div
-        style={{ backgroundImage:`url(${props.pictures[currentIndex]})`}}
+        style={{ backgroundImage:`url(${props.images[currentIndex]})`}}
         className={styles.pictureStyles}
       ></div>
     </div>

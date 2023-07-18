@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 import { useParams } from "react-router-dom";
-// import Carrousel from "../../components/Carrousel/Carrousel";
+import Carrousel from "../../components/Carrousel/Carrousel";
 import styles from "../../styles/HousingSheet.module.css";
 import Dropdown from "../../components/Dropdown/Dropdownhs.js";
 import Tag from "../../components/Tag/Tag";
@@ -24,7 +24,7 @@ export default function HousingSheet() {
   return (
     <div className="mainContainer">
       <div className={styles.carrouselContainer}>
-        {/* <Carrousel pictures={currentLocation?.pictures} /> */}
+        {currentLocation && <Carrousel images={currentLocation?.pictures} />}
       </div>
       <div className={styles.mainContainerInner}>
         <div>
