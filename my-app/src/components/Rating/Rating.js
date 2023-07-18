@@ -1,11 +1,11 @@
 import React from "react";
-import styles from "../../styles/Rating.module.css";
+import "../../styles/Rating.css";
 
 export default function Rating(props) {
   switch (props) {
     case "1":
       return (
-        <div className={styles.svgContainer}>
+        <div className="svgContainer">
           <svg
             xmlns="http://www.w3.org/2000/svg"
             width="25"
@@ -75,7 +75,7 @@ export default function Rating(props) {
 
     case "2":
       return (
-        <div className={styles.svgContainer}>
+        <div className="svgContainer">
           <svg
             xmlns="http://www.w3.org/2000/svg"
             width="25"
@@ -145,7 +145,7 @@ export default function Rating(props) {
 
     case "3":
       return (
-        <div className={styles.svgContainer}>
+        <div className="svgContainer">
           <svg
             xmlns="http://www.w3.org/2000/svg"
             width="25"
@@ -215,7 +215,7 @@ export default function Rating(props) {
 
     case "4":
       return (
-        <div className={styles.svgContainer}>
+        <div className="svgContainer">
           <svg
             xmlns="http://www.w3.org/2000/svg"
             width="25"
@@ -285,7 +285,7 @@ export default function Rating(props) {
 
     case "5":
       return (
-        <div className={styles.svgContainer}>
+        <div className="svgContainer">
           <svg
             xmlns="http://www.w3.org/2000/svg"
             width="25"
@@ -352,5 +352,8 @@ export default function Rating(props) {
           </svg>
         </div>
       );
+
+    default:
+      return null
   }
 }

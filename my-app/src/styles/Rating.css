@@ -1,0 +1,20 @@
+.svgContainer {
+    display: flex;
+    gap: 10px;
+}
+
+svg {
+    width: 24px;
+    height: 24px;
+}
+
+@media all and (max-width: 376px) {
+    .svgContainer {
+        gap: 5px;
+    }
+    
+    svg {
+        width: 18px;
+        height: 18px;
+    }
+}
