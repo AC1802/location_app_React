@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 import Banner from "../../components/Banner/Banner";
 import Card from "../../components/Card/Card";
 import "../../styles/styles.css";
-import BackgroundImage from "../../assets/images/banner.png";
+import backgroundImage from "../../assets/images/banner.png";
 
 export default function Home() {
   const bannerTitle = "Chez vous, partout et ailleurs";
@@ -18,17 +18,18 @@ export default function Home() {
 
   return (
     <div className="mainContainer">
-      <Banner className="homeBanner" title={bannerTitle} backgroundImage={BackgroundImage} />
+      <Banner
+        className="homeBanner"
+        title={bannerTitle}
+        backgroundImage={backgroundImage}
+      />
       <div className="cardContainer">
         <ul className="cardContainer_ul">
           {locationData.map((location) => {
             return (
               <li key={location.id}>
-                <Link to={{pathname: "/housing/" + location.id}}>
-                  <Card
-                    cover={location.cover}
-                    title={location.title}
-                  />
+                <Link to={{ pathname: `/housing/${location.id}` }}>
+                  <Card cover={location.cover} title={location.title} />
                 </Link>
               </li>
             );
