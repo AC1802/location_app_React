@@ -85,6 +85,10 @@
   margin-bottom: 200px;
 }
 
+.dropdownContainer > div {
+  width: 45%;
+}
+
 @media all and (max-width: 536px) {
   .mainContainerInner {
     flex-direction: column;
@@ -132,6 +136,10 @@
 
   .dropdownContainer {
     flex-direction: column;
+  }
+
+  .dropdownContainer > div {
+    width: 100%;
   }
 
   .p {
