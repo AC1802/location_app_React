@@ -35,10 +35,17 @@
 
 .svg {
   margin-right: 30px;
+  width: 32px;
+  height: 32px;
+  color: white;
 }
 
 .svg:hover {
   cursor: pointer;
+}
+
+.active {
+  transform: rotate(180deg);
 }
 
 .pContainer {
@@ -79,6 +86,7 @@
 
   .pContainer {
     max-width: 335px;
+    height: 143px;
   }
 
   .p {
