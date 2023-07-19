@@ -2,7 +2,7 @@ import React from "react";
 import Banner from "../../components/Banner/Banner";
 import Dropdown from "../../components/Dropdown/Dropdown";
 import "../../styles/styles.css";
-import BackroundImage from "../../assets/images/aboutBanner.png";
+import backroundImage from "../../assets/images/aboutBanner.png";
 
 
 const reliabilityText =
@@ -17,7 +17,7 @@ const securityText =
 export default function About() {
   return (
     <div className="mainContainer">
-      <Banner backgroundImage={BackroundImage} />
+      <Banner backgroundImage={backroundImage} />
       <Dropdown title="Fiabilité" text={reliabilityText} />
       <Dropdown title="Respect" text={respectText} />
       <Dropdown title="Service" text={serviceText} />
