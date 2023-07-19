@@ -4,7 +4,7 @@ import Dropdown from "../../components/Dropdown/Dropdown";
 import "../../styles/styles.css";
 import BackroundImage from "../../assets/images/aboutBanner.png";
 
-const bannerTitle = "";
+
 const reliabilityText =
   "Les annonces postées sur Kasa garantissent une fiabilité totale. Les photos sont conformes aux logements, et toutes les informations sont régulièrement vérifiées  par nos équipes.";
 const respectText =
@@ -17,11 +17,11 @@ const securityText =
 export default function About() {
   return (
     <div className="mainContainer">
-      <Banner title={bannerTitle} backgroundImage={BackroundImage} />
+      <Banner backgroundImage={BackroundImage} />
       <Dropdown title="Fiabilité" text={reliabilityText} />
       <Dropdown title="Respect" text={respectText} />
       <Dropdown title="Service" text={serviceText} />
-      <Dropdown title="Sécurité" text={securityText} />
+      <Dropdown title="Sécurité" text={securityText}/>
     </div>
   );
 }
