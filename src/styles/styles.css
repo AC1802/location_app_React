@@ -34,6 +34,10 @@ li {
     border-radius: 10px;
   }
 
+  .dropdown-list {
+    width: 100%;
+  }
+
   .cardContainer_ul {
     background-color: white;
     margin: 0;
