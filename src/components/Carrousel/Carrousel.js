@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import PropTypes from "prop-types";
 import styles from "../../styles/Carrousel.module.css";
 
 export default function Carrousel(props) {
@@ -55,4 +56,8 @@ export default function Carrousel(props) {
       ></div>
     </div>
   );
+}
+
+Carrousel.propTypes = {
+  images: PropTypes.array.isRequired
 }

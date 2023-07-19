@@ -1,3 +1,4 @@
+import PropTypes from "prop-types";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faStar } from "@fortawesome/free-solid-svg-icons";
 import "../../styles/Rating.css";
@@ -16,4 +17,8 @@ export default function Rating({ note }) {
       ))}
     </div>
   );
+}
+
+Rating.propTypes = {
+  note: PropTypes.number.isRequired
 }
