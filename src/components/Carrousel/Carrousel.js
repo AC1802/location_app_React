@@ -4,23 +4,23 @@ import styles from "../../styles/Carrousel.module.css";
 import Left from "../../assets/images/leftArrow.png";
 import Right from "../../assets/images/rightArrow.png";
 
-export default function Carrousel(props) {
+export default function Carrousel({ images }) {
   const [currentIndex, setCurrentIndex] = useState(0);
   const [hasMoreThanOne, setHasMoreThanOne] = useState (false);
 
   useEffect(() => {
-    if (props.images.length > 1) {
+    if (images.length > 1) {
       setHasMoreThanOne(true)
     } 
-  }, [props.images.length])
+  }, [images.length])
 
   console.log(currentIndex);
   const toPrevious = () => {
-    const newIndex = currentIndex === 0 ? props.images.length - 1 : currentIndex - 1;
+    const newIndex = currentIndex === 0 ? images.length - 1 : currentIndex - 1;
     setCurrentIndex(newIndex);
   };
   const toNext = () => {
-    const newIndex = currentIndex === props.images.length - 1 ? 0 : currentIndex + 1;
+    const newIndex = currentIndex === images.length - 1 ? 0 : currentIndex + 1;
     setCurrentIndex(newIndex);
   };
   return (
@@ -33,11 +33,11 @@ export default function Carrousel(props) {
           <img src={Right} alt="suivant" className={styles.rightArrowStyles} />
         </div>
         <div>
-          <p className={styles.p}>{currentIndex + 1}/{props.images.length}</p>
+          <p className={styles.p}>{currentIndex + 1}/{images.length}</p>
         </div>
       </div>
       <div
-        style={{ backgroundImage:`url(${props.images[currentIndex]})`}}
+        style={{ backgroundImage:`url(${images[currentIndex]})`}}
         className={styles.pictureStyles}
       ></div>
     </div>
