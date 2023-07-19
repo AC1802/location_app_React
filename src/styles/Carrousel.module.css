@@ -47,6 +47,10 @@
   color: white;
 }
 
+.hide {
+  display: none;
+}
+
 @media all and (max-width: 376px) {
     .carrouselStyle {
         height: 255px;

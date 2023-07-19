@@ -1,9 +1,19 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import PropTypes from "prop-types";
 import styles from "../../styles/Carrousel.module.css";
+import Left from "../../assets/images/leftArrow.png";
+import Right from "../../assets/images/rightArrow.png";
 
 export default function Carrousel(props) {
   const [currentIndex, setCurrentIndex] = useState(0);
+  const [hasMoreThanOne, setHasMoreThanOne] = useState (false);
+
+  useEffect(() => {
+    if (props.images.length > 1) {
+      setHasMoreThanOne(true)
+    } 
+  })
+
   console.log(currentIndex);
   const toPrevious = () => {
     const newIndex = currentIndex === 0 ? props.images.length - 1 : currentIndex - 1;
@@ -16,35 +26,11 @@ export default function Carrousel(props) {
   return (
     <div className={styles.carrouselStyle}>
       <div>
-        <div onClick={toPrevious}>
-          <svg
-            className={styles.leftArrowStyles}
-            width="48"
-            height="80"
-            viewBox="0 0 48 80"
-            fill="none"
-            xmlns="http://www.w3.org/2000/svg"
-          >
-            <path
-              d="M47.04 7.78312L39.92 0.703125L0.359985 40.3031L39.96 79.9031L47.04 72.8231L14.52 40.3031L47.04 7.78312Z"
-              fill="white"
-            />
-          </svg>
+        <div onClick={toPrevious} className={`${hasMoreThanOne ? "" : styles.hide}`}>
+          <img src={Left} alt="précédent" className={styles.leftArrowStyles}/>
         </div>
-        <div onClick={toNext}>
-          <svg
-            className={styles.rightArrowStyles}
-            xmlns="http://www.w3.org/2000/svg"
-            width="48"
-            height="80"
-            viewBox="0 0 48 80"
-            fill="none"
-          >
-            <path
-              d="M0.960022 72.3458L8.04002 79.4258L47.64 39.8258L8.04002 0.22583L0.960022 7.30583L33.48 39.8258L0.960022 72.3458Z"
-              fill="white"
-            />
-          </svg>
+        <div onClick={toNext} className={`${hasMoreThanOne ? "" : styles.hide}`}>
+          <img src={Right} alt="suivant" className={styles.rightArrowStyles} />
         </div>
         <div>
           <p className={styles.p}>{currentIndex + 1}/{props.images.length}</p>
