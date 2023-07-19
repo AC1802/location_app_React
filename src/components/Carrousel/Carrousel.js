@@ -12,7 +12,7 @@ export default function Carrousel(props) {
     if (props.images.length > 1) {
       setHasMoreThanOne(true)
     } 
-  })
+  }, [props.images.length])
 
   console.log(currentIndex);
   const toPrevious = () => {
