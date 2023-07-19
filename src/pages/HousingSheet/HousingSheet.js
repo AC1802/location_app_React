@@ -19,7 +19,7 @@ export default function HousingSheet() {
 
   const currentLocation = locationData.find((location) => location.id === id);
   console.log(currentLocation);
-  console.log(currentLocation?.pictures)
+  console.log(currentLocation?.pictures);
 
   return (
     <div className="mainContainer">
@@ -47,7 +47,9 @@ export default function HousingSheet() {
               />
             </div>
           </div>
-          <div>{Rating(currentLocation?.rating)}</div>
+          <div>
+            <Rating note={currentLocation?.rating} />
+          </div>
         </div>
       </div>
       <div className={styles.dropdownContainer}>

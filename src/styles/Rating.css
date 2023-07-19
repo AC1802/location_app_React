@@ -8,6 +8,14 @@ svg {
     height: 24px;
 }
 
+.fa-star.red {
+    color: #FF6060;
+}
+
+.fa-star.grey {
+    color: #E3E3E3;
+}
+
 @media all and (max-width: 376px) {
     .svgContainer {
         gap: 5px;
