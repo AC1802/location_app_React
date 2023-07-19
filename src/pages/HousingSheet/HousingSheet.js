@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-import { useParams } from "react-router-dom";
+import { useNavigate, useParams } from "react-router-dom";
 import Carrousel from "../../components/Carrousel/Carrousel";
 import styles from "../../styles/HousingSheet.module.css";
 import Dropdown from "../../components/Dropdown/Dropdown.js";
@@ -9,18 +9,25 @@ import "../../styles/styles.css";
 
 export default function HousingSheet() {
   const { id } = useParams();
+  const navigate = useNavigate();
   const [locationData, setLocationData] = useState([]);
+  const [isLoading, setIsLoading] = useState(true);
 
   useEffect(() => {
     fetch(`../logements.json`)
       .then((response) => response.json())
-      .then((locationData) => setLocationData(locationData))
+      .then((locationData) => {
+        setLocationData(locationData);
+        setIsLoading(false);
+      })
       .catch((err) => console.log(err));
   }, []);
 
   const currentLocation = locationData.find((location) => location.id === id);
-  console.log(currentLocation);
-  console.log(currentLocation?.pictures);
+
+  if (isLoading === false && !currentLocation) {
+    navigate("/not-found");
+  }
 
   return (
     <div className="mainContainer">
