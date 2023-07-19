@@ -151,4 +151,8 @@
   .carrouselContainer {
     margin-bottom: 0;
   }
+
+  .dropdownContainer {
+    margin-bottom: 50px;
+  }
 }
