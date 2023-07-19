@@ -9,7 +9,10 @@ export default function Dropdown({ title, text }) {
 
   return (
     <div className={styles.dropdownContainer}>
-      <div className={styles.divTitle}>
+      <div 
+        className={styles.divTitle}
+        onClick={() => setIsToggle((currentToggle) => !currentToggle)}
+      >
         <div>
           <p className={styles.title}>{title}</p>
         </div>
@@ -17,7 +20,6 @@ export default function Dropdown({ title, text }) {
           <FontAwesomeIcon
             icon={faChevronUp}
             className={`${styles.svg} ${isToggle ? styles.active : ""}`}
-            onClick={() => setIsToggle((currentToggle) => !currentToggle)}
           />
         </div>
       </div>
