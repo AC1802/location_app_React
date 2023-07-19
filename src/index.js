@@ -9,6 +9,7 @@ import Error from "./pages/Error/Error";
 import Header from "./layouts/Header";
 import Footer from "./layouts/Footer";
 import reportWebVitals from "./reportWebVitals";
+import { about, home, housings } from "./routes";
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
@@ -16,9 +17,9 @@ root.render(
     <Router>
       <Header />
       <Routes>
-        <Route path="/" element={<Home />} />
-        <Route path="/housing/:id" element={<HousingSheet />} />
-        <Route path="/about" element={<About />} />
+        <Route path={home} element={<Home />} />
+        <Route path={housings} element={<HousingSheet />} />
+        <Route path={about} element={<About />} />
         <Route path="*" element={<Error />} />
       </Routes>
       <Footer />
