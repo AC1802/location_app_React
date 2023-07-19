@@ -1,21 +1,33 @@
 import React from "react";
 import Logo from "../assets/images/logo.png";
-import { Link } from "react-router-dom";
+import { Link, NavLink } from "react-router-dom";
 import styles from "../styles/Header.module.css";
 
 export default function Header() {
   return (
     <nav className={styles.navbar}>
       <div className="logo_container">
-        <img src={Logo} alt="logo" className={styles.logo} />
+        <Link to="/">
+          <img src={Logo} alt="logo" className={styles.logo} />
+        </Link>
       </div>
       <div className={styles.list}>
-        <Link to="/" className={styles.list_items}>
+        <NavLink
+          to="/"
+          className={({ isActive }) =>
+            `${styles.list_items} ${isActive ? styles.active : ""}`
+          }
+        >
           Accueil
-        </Link>
-        <Link to="/about" className={styles.list_items}>
+        </NavLink>
+        <NavLink
+          to="/about"
+          className={({ isActive }) =>
+            `${styles.list_items} ${isActive ? styles.active : ""}`
+          }
+        >
           A Propos
-        </Link>
+        </NavLink>
       </div>
     </nav>
   );
