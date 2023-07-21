@@ -37,8 +37,8 @@ export default function About() {
     <div className="mainContainer">
       <Banner backgroundImage={backroundImage} />
       <div className="dropdown-list">
-        {dropdownContent.map((content) => {
-          return <Dropdown title={content.title} text={content.text} />;
+        {dropdownContent.map((content, index) => {
+          return <Dropdown key={index} title={content.title} text={content.text} />;
         })}
       </div>
     </div>
