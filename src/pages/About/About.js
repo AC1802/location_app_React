@@ -13,15 +13,33 @@ const serviceText =
 const securityText =
   "La sécurité est la priorité de Kasa. Aussi bien pour nos hôtes que pour les voyageurs, chaque logement correspond aux critères de sécurité établis par nos services. En laissant une note aussi bien à l'hôte qu'au locataire, cela permet à nos équipes de vérifier que les standards sont bien respectés. Nous organisons également des ateliers sur la sécurité domestique pour nos hôtes.";
 
+const dropdownContent = [
+  {
+    title: "Fiabilité",
+    text: reliabilityText,
+  },
+  {
+    title: "Respect",
+    text: respectText,
+  },
+  {
+    title: "Service",
+    text: serviceText,
+  },
+  {
+    title: "Sécurité",
+    text: securityText,
+  },
+];
+
 export default function About() {
   return (
     <div className="mainContainer">
       <Banner backgroundImage={backroundImage} />
       <div className="dropdown-list">
-        <Dropdown title="Fiabilité" text={reliabilityText} />
-        <Dropdown title="Respect" text={respectText} />
-        <Dropdown title="Service" text={serviceText} />
-        <Dropdown title="Sécurité" text={securityText} />
+        {dropdownContent.map((content) => {
+          return <Dropdown title={content.title} text={content.text} />;
+        })}
       </div>
     </div>
   );
